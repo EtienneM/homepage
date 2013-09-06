@@ -1,4 +1,6 @@
-<html><head><style type="text/css">
+<html><head>
+<title>Upload de fichier</title>
+<style type="text/css">
 <!-- body { font-family: "Trebuchet MS",Verdana,Arial,Helvetica,sans-serif; font-size: 10pt; background-color: #eee;} -->
 </style>
 <?php 
@@ -8,7 +10,9 @@
 // Files are stored in a subdirectory (see $SUBDIR).
 // This script is public domain.
 // Source: http://sebsauvage.net/wiki/doku.php?id=php:imagehosting
-$PASSWORD='A DEFINIR';
+$mdp_file = fopen('mdp.txt');
+$PASSWORD=fgets($mdp_file);
+fclose($mdp_file);
 $SUBDIR='files'; // subdirectory where to store files and images.
 if (!is_dir($SUBDIR)) 
 {
