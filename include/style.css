@@ -19,9 +19,8 @@
 #main {
 	background-color: #939393;
 	width: 778px;
-	height: 300px;
-	/*overflow: scroll;*/
 	text-align:justify;
+	padding: 10px;
 }
 #owncloud {
 	background: url('../img/owncloud.png') no-repeat;
@@ -47,6 +46,18 @@
 }
 a img {
 	border: none;
+}
+
+p.code {
+	font-family: 'Courier New';
+	background-color: white;
+	color: black;
+	padding: 10px;
+}
+
+span.fichier {
+	font-family: 'Courier New';
+	font-size: 10pt;
 }
 
 .error {
