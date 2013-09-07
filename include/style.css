@@ -22,6 +22,16 @@
 	text-align:justify;
 	padding: 10px;
 }
+#raspcontrol {
+	background: url('../img/raspcontrol.png') no-repeat;
+	padding-left: 18px;
+	background-size: 16px;
+}
+#zerobin {
+	background: url('../img/0bin.png') no-repeat;
+	padding-left: 18px;
+	background-size: 16px;
+}
 #owncloud {
 	background: url('../img/owncloud.png') no-repeat;
 	padding-left: 18px;
@@ -29,6 +39,11 @@
 }
 #transmission {
 	background: url('../img/transmission.png') no-repeat;
+	padding-left: 18px;
+	background-size: 16px;
+}
+#upload {
+	background: url('../img/upload.png') no-repeat;
 	padding-left: 18px;
 	background-size: 16px;
 }
