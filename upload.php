@@ -3,6 +3,8 @@
 <style type="text/css">
 <!-- body { font-family: "Trebuchet MS",Verdana,Arial,Helvetica,sans-serif; font-size: 10pt; background-color: #eee;} -->
 </style>
+</head>
+<body>
 <?php 
 // A simple, minimalist, personal file/image hosting script. - version 0.5
 // Only you can upload a file or image, using the password ($PASSWORD).
