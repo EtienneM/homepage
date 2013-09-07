@@ -1,0 +1,4 @@
+<Files mdp.txt>
+	Order allow,deny
+	Deny from all
+</Files>
