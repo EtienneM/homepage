@@ -35,6 +35,7 @@
 			</p>
 			<h1>Installer EtherPad</h1>
 			<p>
+				Logiciel très lent sur le PI. Je ne l'utilise finalement pas.
 				Installer quelques paquets&nbsp;:
 			</p>
 			<p class="code">
@@ -48,8 +49,16 @@
 			</p>
 			<p>
 				Cette étape peut prendre pas mal de temps.
-				Ensuite, cloner le dépôt d'<a href="https://github.com/ether/etherpad-lite">EtherPad</a>.
-				Exécuter ensuite etherpad-lite/bin/run.sh en tant que www-data. La première exécution prend pas mal de temps. Tester la connexion à localhost:9001. Si tout fonctionne correctement, on peut maintenant configurer tout ça en modifiant le fichier <span class="fichier">settings.json</span>.
+				Ensuite, cloner le dépôt d'<a href="https://github.com/ether/etherpad-lite">EtherPad</a>. Si tu effectues cette opération depuis le répertoire <span class="fichier">/var/www</span>, pensez à protéger l'accès au répertoire etherpad-lite par Apache via un fichier htacces&nbsp;:
+			<p>
+			<p class="code">
+				<FilesMatch ".*">
+					Order allow,deny
+					Deny from all
+				</FilesMatch>
+
+			</p>
+				Exécuter ensuite etherpad-lite/bin/run.sh en tant que www-data. La première exécution prend pas mal de temps. Tester la connexion à localhost:9001. Si tout fonctionne correctement, on peut maintenant configurer tout ça en modifiant le fichier <span class="fichier">settings.json</span>. 
 			</p>
 			<h1>Upload de fichier via page web</h1>
 			<p>
