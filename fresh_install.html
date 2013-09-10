@@ -25,10 +25,28 @@
 				Puis donner les droits à l'utilisateur du serveur web pour accéder à ce fichier. Le mot de passe sera à la prochaine exécution hashé pour plus de sécurité. 
 			</p>
 			<h1>Installer Owncloud</h1>
+			<!--h1>Installer Cozy Cloud</h1>
+			<p>
+				Pour installer Cozy sur un Raspberry PI, suivre les <a href="https://github.com/mycozycloud/cozy-setup/tree/arm">instructions pour ARM</a>. Appelé l'exécutable <span class="fichier">fab</span> avec l'utilisateur root. 
+			</p-->
 			<h1>Installer Transmission</h1>
 			<p>
 				Installer le paquet <span class="fichier">transmission-daemon</span>. Tout se passe ensuite dans le fichier <span class="fichier">/etc/transmission-daemon/settings.json</span>. Le nom des options est assez clair normalement. /!ATTENTION!\ Ne faire des modifications qu'une fois le service stoppé. La configuration du serveur web se fait dans les options rpc-*. Pour changer le mot de passe, modifier la valeur de la clé <span class="fichier">rpc-password</span> avec le mot de passe souhaité. Au démarrage du service, transmission va hasher ce mot de passe. Toutes les options intéressantes peuvent ensuite être modifiées via l'interface web.
 			</p>
+			<h1>Installer SABnzbd+</h1>
+			<p>
+				Installer le paquet <span class="fichier">sabnzbdplus</span>. &Eacute;diter le fichier <span class="fichier">/etc/default/sabnzbdplus</span>&nbsp;:
+			</p>
+			<p class="code">
+				USER=root
+				CONFIG=/etc/sabnzbdplus.cfg
+				HOST=0.0.0.0
+				PORT=9003
+			</p>
+			<p>
+				Enfin, se connecter au <a href="http://titi.dyndns-ip.com:9003/">service</a> pour une première configuration. Après l'exécution de l'assistant, le fichier de configuration est rempli et peut être édité. Quelques clés à changer&nbsp;:
+			</p>
+
 			<h1>Installer ZeroBin</h1>
 			<p>
 				Cloner le dépôt de <a href="https://github.com/sebsauvage/ZeroBin">ZeroBin</a> dans le répertoire accessible par le serveur web.
@@ -64,6 +82,7 @@
 			<p>
 				Script d'<a href="http://sebsauvage.net/wiki/doku.php?id=php:filehosting">upload</a> basique de SebSauvage. 
 			</p>
+
 			<h1>Configurer le NFS</h1>
 			<p>Les explications ont été prise sur <a href="http://doc.ubuntu-fr.org/nfs">ubuntu-fr</a>.</p>
 			<p>
