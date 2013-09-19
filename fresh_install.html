@@ -38,13 +38,16 @@
 				Installer le paquet <span class="fichier">sabnzbdplus</span>. &Eacute;diter le fichier <span class="fichier">/etc/default/sabnzbdplus</span>&nbsp;:
 			</p>
 			<p class="code">
-				USER=root
-				CONFIG=/etc/sabnzbdplus.cfg
-				HOST=0.0.0.0
-				PORT=9003
+				USER=root<br/>
+				CONFIG=/etc/sabnzbdplus.cfg<br/>
+				HOST=0.0.0.0<br/>
+				PORT=9003<br/>
 			</p>
 			<p>
-				Enfin, se connecter au <a href="http://titi.dyndns-ip.com:9003/">service</a> pour une première configuration. Après l'exécution de l'assistant, le fichier de configuration est rempli et peut être édité. Quelques clés à changer&nbsp;:
+				Enfin, se connecter au <a href="http://titi.dyndns-ip.com:9003/">service</a> pour une première configuration. Après l'exécution de l'assistant, le fichier de configuration est rempli et peut être édité.
+			</p>
+			<p>
+				SABnzbd+ nécessite une version précise d'unrar afin d'extraire les fichiers des archives téléchargées. Pour cela, télécharger les <a href="http://www.rarlab.com/rar_add.htm">sources</a>, les extraires puis <span class="fichier">make && sudo make install</span>. Puis redémarrer SABnzbd+ pour ne plus avoir l'affichage de l'avertissement. 
 			</p>
 
 			<h1>Installer ZeroBin</h1>
@@ -70,10 +73,10 @@
 				Ensuite, cloner le dépôt d'<a href="https://github.com/ether/etherpad-lite">EtherPad</a>. Si tu effectues cette opération depuis le répertoire <span class="fichier">/var/www</span>, pensez à protéger l'accès au répertoire etherpad-lite par Apache via un fichier htacces&nbsp;:
 			<p>
 			<p class="code">
-				<FilesMatch ".*">
-					Order allow,deny
-					Deny from all
-				</FilesMatch>
+				&lt;FilesMatch ".*"><br/>
+					Order allow,deny<br/>
+					Deny from all<br/>
+				&lt;/FilesMatch><br/>
 
 			</p>
 				Exécuter ensuite etherpad-lite/bin/run.sh en tant que www-data. La première exécution prend pas mal de temps. Tester la connexion à localhost:9001. Si tout fonctionne correctement, on peut maintenant configurer tout ça en modifiant le fichier <span class="fichier">settings.json</span>. 
@@ -81,6 +84,11 @@
 			<h1>Upload de fichier via page web</h1>
 			<p>
 				Script d'<a href="http://sebsauvage.net/wiki/doku.php?id=php:filehosting">upload</a> basique de SebSauvage. 
+			</p>
+
+			<h1>Installer un serveur FTP</h1>
+			<p>
+				Un serveur SFTP existe déjà gràace à SSH. S'y connecter avec Filezilla en mettant le port 22.
 			</p>
 
 			<h1>Configurer le NFS</h1>
