@@ -12,7 +12,7 @@
 		</div>
 		<div id="main">
 			<h1>Installer Raspbian</h1>
-			<h1>Installer Apache</h1>
+			<h1>Installer LAMP</h1>
 			<h1>Installer Raspcontrol</h1>
 			<p>
 				D'abord cloner le dépôt de <a href="https://github.com/imjacobclark/Raspcontrol">Raspcontrol</a> dans <span class="fichier">/var/www</span>. Mettre au format JSON dans le fichier <span class="fichier">/etc/raspcontrol/database.aptmnt</span> le nom d'utilisateur et le mot de passe&nbsp;:
@@ -25,6 +25,9 @@
 				Puis donner les droits à l'utilisateur du serveur web pour accéder à ce fichier. Le mot de passe sera à la prochaine exécution hashé pour plus de sécurité. 
 			</p>
 			<h1>Installer Owncloud</h1>
+			<p>
+				Télécharger l'archive contenant Owncloud puis l'extraire. Déplacer le répertoire de l'archive dans <span class="fichier">/var/www</span> et donner les droit de ce répertoire à <span class="fichier">www-data</span>. A la première connexion à la page, configuration pour l'installation. Penser à ouvrir le menu "advanced" pour configurer la BDD sur MySQL.
+			</p>
 			<!--h1>Installer Cozy Cloud</h1>
 			<p>
 				Pour installer Cozy sur un Raspberry PI, suivre les <a href="https://github.com/mycozycloud/cozy-setup/tree/arm">instructions pour ARM</a>. Appelé l'exécutable <span class="fichier">fab</span> avec l'utilisateur root. 
