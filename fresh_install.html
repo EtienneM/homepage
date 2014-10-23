@@ -13,17 +13,16 @@
 		<div id="main">
 			<h1>Installer Raspbian</h1>
 			<h1>Installer LAMP</h1>
-			<h1>Installer Raspcontrol</h1>
+
+			<h1>Installer RPI-Monitor</h1>
 			<p>
-				D'abord cloner le dépôt de <a href="https://github.com/imjacobclark/Raspcontrol">Raspcontrol</a> dans <span class="fichier">/var/www</span>. Mettre au format JSON dans le fichier <span class="fichier">/etc/raspcontrol/database.aptmnt</span> le nom d'utilisateur et le mot de passe&nbsp;:
+				Instructions récupérées <a href="http://www.tropfacile.net/doku.php/raspberry-pi/comment-monitorer-son-raspberry-rpi-monitor">ici</a>. 
 			</p>
-			<p class="code">{
-    			"user":       "yourName",
-    			"password":   "yourPassword"
-			}</p>
 			<p>
-				Puis donner les droits à l'utilisateur du serveur web pour accéder à ce fichier. Le mot de passe sera à la prochaine exécution hashé pour plus de sécurité. 
+				Installer dans un premier temps quelques dépendances&nbsp;:
+				<span class="fichier">sudo apt-get install librrds-perl libhttp-daemon-perl libhttp-daemon-ssl-perl</span> puis récupérer le <a href="http://rpi-experiences.blogspot.fr/">paquet Debian</a>. On installe enfin avec <span class="fichier">sudo dpkg -i rpimonitor_<emph>version</emph>_all.deb</span>. Le site est maintenant disponible sur le port 8888. La configuration se situe dans le répertoire <span class="fichier">/etc/rpimonitor/</span> pour modifier le port par défaut
 			</p>
+
 			<h1>Installer Owncloud</h1>
 			<p>
 				Télécharger l'archive contenant Owncloud puis l'extraire. Déplacer le répertoire de l'archive dans <span class="fichier">/var/www</span> et donner les droit de ce répertoire à <span class="fichier">www-data</span>. A la première connexion à la page, configuration pour l'installation. Penser à ouvrir le menu "advanced" pour configurer la BDD sur MySQL.
@@ -32,10 +31,12 @@
 			<p>
 				Pour installer Cozy sur un Raspberry PI, suivre les <a href="https://github.com/mycozycloud/cozy-setup/tree/arm">instructions pour ARM</a>. Appelé l'exécutable <span class="fichier">fab</span> avec l'utilisateur root. 
 			</p-->
+
 			<h1>Installer Transmission</h1>
 			<p>
 				Installer le paquet <span class="fichier">transmission-daemon</span>. Tout se passe ensuite dans le fichier <span class="fichier">/etc/transmission-daemon/settings.json</span>. Le nom des options est assez clair normalement. /!ATTENTION!\ Ne faire des modifications qu'une fois le service stoppé. La configuration du serveur web se fait dans les options rpc-*. Pour changer le mot de passe, modifier la valeur de la clé <span class="fichier">rpc-password</span> avec le mot de passe souhaité. Au démarrage du service, transmission va hasher ce mot de passe. Toutes les options intéressantes peuvent ensuite être modifiées via l'interface web.
 			</p>
+
 			<h1>Installer SABnzbd+</h1>
 			<p>
 				Installer le paquet <span class="fichier">sabnzbdplus</span>. &Eacute;diter le fichier <span class="fichier">/etc/default/sabnzbdplus</span>&nbsp;:
@@ -91,7 +92,7 @@
 
 			<h1>Installer un serveur FTP</h1>
 			<p>
-				Un serveur SFTP existe déjà gràace à SSH. S'y connecter avec Filezilla en mettant le port 22.
+				Un serveur SFTP existe déjà grâce à SSH. S'y connecter avec Filezilla en mettant le port 22.
 			</p>
 
 			<h1>Configurer le NFS</h1>
@@ -140,7 +141,7 @@
 				Telechargements -fstype=nfs4,ro 192.168.0.3:/home/pi/Téléchargements
 			</p>
 			<p>
-				Un répertoire /mnt/pi/Telechargements existe alots avec pour contenu le partage NFS.
+				Un répertoire /mnt/pi/Telechargements existe alors avec pour contenu le partage NFS.
 				/!ATTENTION!\ La présence d'accent dans le nom du partage local (Telechargements) risque d'empêcher le fonctionnement du montage.<br/>
 				Enfin, redémarrer le service autofs&nbsp;:
 			</p>
