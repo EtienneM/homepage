@@ -22,7 +22,7 @@
 	text-align:justify;
 	padding: 10px;
 }
-#raspcontrol {
+#raspcontrol #rpi-monitor {
 	background: url('../img/raspcontrol.png') no-repeat;
 	padding-left: 18px;
 	background-size: 16px;
